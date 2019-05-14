@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS massiert (
 GastID CHAR(6),
 MasseurID CHAR(6),
 Datum DATE,
-PRIMARY KEY(GastID, MasseurID)
+PRIMARY KEY(GastID, MasseurID, Datum)
 FOREIGN KEY(GastID) REFERENCES Gast(GastID),
 FOREIGN KEY(MasseurID) REFERENCES Masseur(MasseurID));"""
 connection.execute(sql_command)
